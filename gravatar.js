@@ -1,21 +1,30 @@
-//(function(){
-    // var ajaxRequest =new XMLHttpRequest
- 
-    var email="joedoe@gmail.com"
 
-    var url=decodeURI( "email_hash.php?email="+email)
+// on crée l'objet
+var xhr=new XMLHttpRequest();
+// var data= new FormData();
+var email= "joe_doe@gmail.com"
+var url="email_hash.php?email"
+var grav_url="https://www.gravatar.com/"
 
-    console.log(url)
-    debugger
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var result = JSON.parse(this.responseText);
-            console.log(result);
+
+
+var result=makeRequest(url,email)
+console.log(result)
+
+
+function makeRequest(url,email) { 
+    xhr.open('GET', url+ encodeURIComponent(email), true)
+    xhr.onreadystatechange=function() { 
+        if(xhr.readyState===4){
+            // console.log("done")
+            var response=xhr.responseText
+            console.log(response)
+            // return response
+        }else { 
+            return null  
+
         }
-    };
-    xmlhttp.open("GET",url, true);
-    xmlhttp.send();
-
-
-//})()
+    }
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send() 
+}
