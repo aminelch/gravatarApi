@@ -125,7 +125,9 @@ class Gravatar
     /**
      *    Object property overloading
      */
-    public function __get($var) { return @$this->properties[$var]; }
+    public function __get($var) { 
+        return @$this->properties[$var]; 
+    }
 
     /**
      *    Object property overloading
@@ -173,6 +175,8 @@ class Gravatar
      *    toHTML
      */
     public function toHTML() {
+        var_dump($this->getSrc());
+        die();
         return     '<img src="'. $this->getSrc() .'"'
                 .(!isset($this->size) ? "" : ' width="'.$this->size.'" height="'.$this->size.'"')
                 .$this->extra

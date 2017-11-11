@@ -20,4 +20,4 @@ $gravatar = new Gravatar($email, null);
           $gravatar->rating = "G";
           $gravatar->border = "FF0000";
 // $gravatar->toHTML();
-echo $gravatar;
+$gravatar->toHTML();
