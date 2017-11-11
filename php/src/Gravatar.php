@@ -13,11 +13,13 @@
 *        echo Gravatar::getGravatar();
 * </code>
 *
-*   Class Page: https://github.com/aminelch/gravatarApi/tree/master/php/src
 *
+* @package Gravatar
+* @category Gravatar
 * @author Amine L'ch <aminelch.github.io>
 * @version 1.0
-* @package Gravatar
+* @link https://github.com/aminelch/gravatarApi/
+* @license     MIT License
 */
 
 class Gravatar {
