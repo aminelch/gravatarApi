@@ -14,7 +14,12 @@ $useremail="aminelch95@gmail.com";
 }
 
 	$gravatar_src=Gravatar::getGravatar($useremail,80);
-
+function dd ($variable){
+	echo '<pre>';
+	var_dump($variable);
+	echo '</pre>';
+	return null;
+}
 ?>
 
 <!DOCTYPE html>
