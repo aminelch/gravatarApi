@@ -13,7 +13,7 @@ console.log(result)
 
 
 function makeRequest(url,email) { 
-    xhr.open('GET', url+ encodeURIComponent(email), true)
+    xhr.open('GET', grav_url+ encodeURIComponent(email), true)
     xhr.onreadystatechange=function() { 
         if(xhr.readyState===4){
             // console.log("done")
